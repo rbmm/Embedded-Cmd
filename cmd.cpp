@@ -368,6 +368,8 @@ INT_PTR SDialog::OnInitDialog(HWND hwndDlg)
 		_hwndOut = GetDlgItem(hwndDlg, IDC_EDIT2);
 		_hwndExec = GetDlgItem(hwndDlg, IDC_BUTTON1);
 
+		SendMessageW(_hwndOut, EM_LIMITTEXT, MAXLONG, 0);
+
 		static const int 
 			X_index[] = { SM_CXSMICON, SM_CXICON }, 
 			Y_index[] = { SM_CYSMICON, SM_CYICON },
